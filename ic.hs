@@ -69,7 +69,7 @@ connectMaybe _ Nothing = id
 connectMaybe fixed (Just var) = connect fixed var
 
 
--- same as connectMaybe but for two plugs
+-- same as connectMaybe but for two maybe plugs
 connectMaybes :: Maybe Plug -> Maybe Plug -> Net -> Net
 connectMaybes (Just a) (Just b) = connect a b
 connectMaybes _ _ = id
